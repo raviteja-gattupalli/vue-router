@@ -1,12 +1,22 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <Header />
+     <Sidenav />
+     <br>
     <router-view/>
   </div>
 </template>
+<script>
+import Header from './components/Header.vue';
+import Sidenav from './components/Sidenav.vue';
+
+export default ({
+  components: {
+    Header,
+    Sidenav,
+  },
+});
+</script>
 
 <style>
 #app {
